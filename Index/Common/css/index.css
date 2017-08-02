@@ -51,6 +51,7 @@ header{
 	overflow: hidden;
 }
 .headLogoLeft{
+	margin-top: 20px;
 	float: left;
 }
 .headLogoRight{
