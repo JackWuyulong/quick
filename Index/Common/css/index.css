@@ -109,6 +109,12 @@ header{
 	color: rgb(136,196,57);
 }
 /*底部样式*/
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
 .bottom{
 	width: 60%;
 	margin: 0 auto;
@@ -142,3 +148,16 @@ header{
 .bottom .protect{ 
 	background-position: -152px 0;
 }
+.bottom .info{ 
+	float: left;
+	color: #666;
+}
+.bottom .info li{
+	float: left;
+	width: 144px;
+}
+.bottom .info li a{
+	display: block;
+}
+
+
