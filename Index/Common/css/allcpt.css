@@ -1,0 +1,248 @@
+/*头部样式*/
+body{
+	margin: 0px;
+	position: relative;
+}
+.head{
+	width: 100%;
+	height: 35px;
+	background-color: rgb(247,247,247);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0.1;
+}
+.box{
+	width: 1200px;
+	margin: 0px auto;
+	position: relative;
+	z-index: 1;
+}
+header{
+	width: 100%;
+}
+.headLogin{
+	/*width: 100%;*/
+	height: 35px;
+}
+.headLoginLeft{
+	float: left;
+}
+.headLoginRight{
+	float: right;
+}
+.headLogin a{
+	font-size: 12px;
+	color: black;
+	text-decoration: none;
+	line-height: 35px;
+}
+.sep{
+	color: lightgray;
+}
+.hotTel,.hotLine{
+	font-size: 12px;
+}
+.hotLine{
+	color: rgb(143,195,31);
+}
+.headLogo{
+	width: 100%;
+	overflow: hidden;
+}
+.headLogoLeft{
+	margin-top: 20px;
+	float: left;
+}
+.headLogoRight{
+	width: 40%;
+	float: right;
+}
+.headLogoRight input{
+	width: 80%;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+.headLogoRight button{
+	width: 15%;
+	height: 36px;
+	margin-top: 20px;
+	float: left;
+}
+.searchMore{
+	float: left;
+	font-size: 10px;
+}
+.searchMore span{
+	color: black;
+}
+.searchMore a{
+	color: gray;
+	text-decoration: none;
+}
+.bodyHead{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.fen{
+	width: 15%;
+	float: left;
+	height: 35px;
+	background-color: rgb(136,196,57);
+	color: white;
+	text-align: center;
+	line-height: 35px;
+}
+.fen:before{
+	content: '\e056';
+}
+.bodyHead a{
+	float: left;
+	margin-left: 2%;
+	color: gray;
+	text-decoration: none;
+	line-height: 35px;
+}
+.bodyHead a:hover{
+	color: rgb(136,196,57);
+}
+hr{
+	width: 100%;
+	border: 1px rgb(136,196,57) solid;
+	margin: 0px;
+}
+/*全部机型页面样式*/
+.box img{
+	width: 100%;
+}
+.bodyFenlei{
+	padding: 20px;
+	margin-top: 20px;
+}
+.pinpai{
+	display: block;
+	overflow: hidden;
+}
+.pinpai dt,.pinpai dd{
+	font-size: 14px;
+	float: left;
+	margin-left: 0px;
+	margin-right: 36px;
+	margin-bottom: 10px;
+}
+.pinpai dt{
+	color: #999;
+}
+.pinpai dd{
+	cursor: pointer;
+}
+.ddbox dd{
+	color: rgb(102,102,102);
+}
+.spColor{
+	color: #8FC31F;
+}
+.ddbox{
+	overflow: hidden;
+}
+.shaixuan strong{
+
+}
+.paixu{
+	list-style: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+.paixuLi{
+	font-size: 14px;
+	color: rgb(102,102,102);
+	float: left;
+	margin-right: 40px;
+}
+#selected{
+	color: #8FC31F;
+}
+.present{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.presentcpt{
+	width: 261px;
+	height: 289px;
+	padding: 10px 15px;
+	margin: 0px 12px 12px 0px;
+	text-align: center;
+	/*border: 1px solid;*/
+	float: left;
+}
+.presentcpt img{
+	width: 240px;
+}
+.presentcpt p{
+	height: 24px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 14px;
+	color: rgb(102,102,102);
+	margin: 0px;
+}
+.presentcpt a{
+	text-decoration: none;
+	line-height: 24px;
+}
+.presentcpt h4{
+	color: #f5675d;
+	margin: 10px 0px;
+}
+@keyframes ani{
+	0%{
+		transform: translateY(0px);
+		box-shadow: 0px 0px 0px 0px white;
+	}
+	100%{
+		transform: translateY(-5px);
+		box-shadow: 5px 5px 10px 1px lightgray;
+	}
+}
+.presentcpt:hover{
+	animation: ani 0.5s linear forwards;
+}
+/*底部样式*/
+.bottom{
+	width: 1200px;
+	margin: 0 auto;
+}
+.advantage{
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+}
+.advantage .size{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.bottom .free{ 
+	background-image: url("../img/index/advantage.png");
+	width: 45px;
+	height: 45px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+ }
+.bottom .lowMoney{
+	background-position: -53px 0;
+}
+
+.bottom .anytime{
+	background-position: -102px 0;
+}
+
+.bottom .protect{ 
+	background-position: -152px 0;
+}
