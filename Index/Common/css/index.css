@@ -108,6 +108,11 @@ header{
 .bodyHead a:hover{
 	color: rgb(136,196,57);
 }
+hr{
+	width: 100%;
+	border: 1px rgb(136,196,57) solid;
+	margin: 0px;
+}
 /*底部样式*/
 a{
 	text-decoration: none;
