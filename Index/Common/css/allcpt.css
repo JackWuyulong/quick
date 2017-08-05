@@ -220,17 +220,21 @@ li{
 	list-style: none;
 }
 .bottom{
-	width: 60%;
+	width: 1200px;
 	margin: 0 auto;
 }
 .advantage{
 	font-size: 16px;
 	color: rgb(102, 102, 102);
+    overflow: hidden;
+    height: 98px;
+    border-bottom: 1px #ddd solid;
 }
 .advantage .size{
 	float: left;
-	width: 25%;
 	text-align: center;
+    width: 299px;
+    border-right: 1px #ddd solid;
 }
 .bottom .free{ 
 	background-image: url("../img/index/advantage.png");
@@ -305,6 +309,7 @@ li{
 }
 .bottom .container{
 	height: 270px;
+    margin-top: 10px;
 }
 .bottom .connect{
 	width: 24%;
