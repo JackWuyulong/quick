@@ -4,9 +4,12 @@
 	<meta charset="utf-8" />
 	<title>Document</title>
 	<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
+<<<<<<< Updated upstream
 	<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper.min.js"></script>
 	<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="__ROOT__/Index/Common/css/swiper.min.css" />
+=======
+>>>>>>> Stashed changes
 </head>
 <body>
 	<!doctype html>
@@ -58,7 +61,11 @@
 			</header>
 			<div>
 				<div class="bodyHead">
+<<<<<<< Updated upstream
 					<div class="fen">商品分类</div>
+=======
+					<span class="fen">商品分类</span>
+>>>>>>> Stashed changes
 					<a href="#">首页</a>
 					<a href="#">全部机型</a>
 					<a href="#">限时促销</a>
@@ -68,6 +75,7 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< Updated upstream
 		<hr />
 	</body>
 </html>
@@ -1134,6 +1142,10 @@
 		</ul>
 	</div>
 	</div>
+=======
+	</body>
+</html>
+>>>>>>> Stashed changes
 	<!doctype html>
 <html>
 <head>
@@ -1157,7 +1169,11 @@
 				<span class="anytime free"></span>
 				<span>随时还</span>
 			</div>
+<<<<<<< Updated upstream
 			<div class="size" style="border:0px">
+=======
+			<div class="size">
+>>>>>>> Stashed changes
 				<span class="protect free" ></span>
 				<span>全程保</span>
 			</div>
@@ -1264,6 +1280,7 @@
 </body>
 </html>
 </body>
+<<<<<<< Updated upstream
 <script type="text/javascript">
 	var mySwiper = new Swiper('.swiper-container', {
 		autoplay: 3000,//可选选项，自动滑动
@@ -1327,4 +1344,6 @@
 
 	
 </script>
+=======
+>>>>>>> Stashed changes
 </html>
