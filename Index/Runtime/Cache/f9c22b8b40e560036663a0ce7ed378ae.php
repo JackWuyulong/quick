@@ -1129,41 +1129,11 @@
 				<a href="#company">合作伙伴</a>
 			</li>
 			<li>
-				<a href="#credit" style="color: #fff">征信伙伴</a>
+				<a href="#credit">征信伙伴</a>
 			</li>
 		</ul>
 	</div>
 	</div>
-	<!-- <div class="navSlide">
-		<ul>
-			<li>
-				<a href="#hot" >热销机型</a>
-			</li>
-			<li>
-				<a href="#commonProduct" >普通办公</a>
-			</li>
-			<li>
-				<a href="#lighter">轻薄便携</a>
-			</li>
-			<li>
-				<a href="#design">图形设计</a>
-			</li>
-			<li>
-				<a href="#tel">技术开发</a>
-			</li>
-			<li>
-				<a href="#new">最新上架</a>
-			</li>
-			<li>
-				<a href="#company">合作伙伴</a>
-			</li>
-			<li>
-				<a href="#credit" style="color: #fff">征信伙伴</a>
-			</li>
-		</ul>
-	</div> -->
-
-
 	<!doctype html>
 <html>
 <head>
@@ -1351,6 +1321,9 @@
 	// 	console.log(11)
 	// 	$(".item").slideToggle("500");
 	// })
+	$(".navSlide li").on("click",function(){
+		$(this).css("background","#8FC31F").siblings().css("background","white");
+	})
 
 	
 </script>
