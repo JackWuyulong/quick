@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title>全部机型</title>
 		<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/allcpt.css">
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.1.1.min.js"></script>
 	</head>
 	<body>
 		<!doctype html>
@@ -12,7 +13,14 @@
 		<meta charset="utf-8" />
 		<title>快租365</title>
 		<style type="text/css">
-			
+			.headLoginLeft a:hover{
+				color: rgb(136,196,57)
+			}
+
+			.headLoginLeft .yep:hover{
+				color: rgb(136,196,57)
+			}
+
 		</style>
 	</head>
 	<body>
@@ -21,8 +29,9 @@
 			<header>
 				<div class="headLogin">
 					<div class="headLoginLeft">
-						<a href="#">登录</a>
-						<a href="#">注册</a>
+						<?php if($_SESSION['username']!= ''): ?><span style="font-size: 12px">你好,&nbsp;
+							<?php echo (session('username')); ?></span> <span style="font-size: 12px;cursor: pointer;" onclick="quit()" class="yep">退出</span> <a href="">个人中心</a>
+						<?php else: ?> <a href="__APP__/Index/login">登录</a>&nbsp;&nbsp;<a href="#">注册</a><?php endif; ?>
 					</div>
 					<div class="headLoginRight">
 						<a href="#">我的订单</a>
@@ -36,7 +45,6 @@
 				<div class="headLogo">
 					<div class="headLogoLeft">
 						<img src="__ROOT__/Index/Common/img/index/logo_full.png"/>
-						<img src=""/>
 						<!-- <div style="height: 50px;width: 520px;"></div> -->
 					</div>
 					<div class="headLogoRight">
@@ -56,19 +64,76 @@
 			<div>
 				<div class="bodyHead">
 					<div class="fen">商品分类</div>
-					<a href="#">首页</a>
-					<a href="#">全部机型</a>
-					<a href="#">限时促销</a>
-					<a href="#">新品推荐</a>
+					<a href="__APP__/Index/index">首页</a>
+					<a href="__APP__/Index/Allcpt">全部机型</a>
+					<a href="__APP__/Index/Time">限时促销</a>
+					<a href="__APP__/Index/newproduct">新品推荐</a>
 					<a href="#">关于我们</a>
 					<a href="#" style="float: right;color: black;">我要还款></a>
 				</div>
 			</div>
+			
 		</div>
 		<hr />
 	</body>
+	<script type="text/javascript">
+		function quit(){
+			$.ajax({
+				url:"__APP__/Index/quitUser",
+				dataType:"JSON",
+				type:"post",
+				success:function(data){
+					if(data['status']==1){
+						window.location.href="__APP__/Index/login";
+					}
+				}
+			})
+		}
+	</script>
 </html>
 		<div class="box">
+			<div class="pullList">
+				<div class="item">
+    		<ul>
+    			<li>
+    				<h5><span class="itemImg itemImgF"></span>&nbsp;办公电脑</h5>
+    				<a href="">一体机</a>
+    				<a href="">笔记本电脑</a>
+    				<a href="">台式机</a>
+    			</li>
+    			<li>
+    				<h5><span class="itemImg itemImgS"></span>&nbsp;办公外设</h5>
+    				<a href="">投影仪</a>
+    				<a href="">电视</a>
+    				<a href="">净化器</a>
+    				<a href="">平板</a>
+    				<a href="">手机</a>
+    				<a href="">显示器</a>
+    				<a href="">打印机</a>
+    				<a href="">配件</a>
+    			</li>
+    			<li>
+    				<h5><span class="itemImg itemImgT"></span>&nbsp;办公服务</h5>
+    				<a href="">办公软件</a>
+    				<a href="">IT服务</a>
+    			</li>
+    			<li>
+    				<h5><span class="itemImg itemImgFour"></span>&nbsp;使用场景</h5>
+    				<a href="">普通办公</a>
+    				<a href="">技术开发</a>
+    				<a href="">轻薄便捷</a>
+    				<a href="">图形设计</a>
+    			</li>
+    			<li>
+    				<h5><span class="itemImg itemImgFive"></span>&nbsp;价格区间</h5>
+    				<a href="">0~100元</a>
+    				<a href="">100元~150元</a>
+    				<a href="">150元~300元</a>
+    				<a href="">300元以上</a>
+    			</li>
+    		</ul>
+    	</div>
+			</div>
 			<a href="#">
 				<img src="__ROOT__/Index/Common/img/alltype/allcptHead.png">
 			</a>
@@ -309,8 +374,9 @@
 			<div class="phone">
 				<img src="__ROOT__/Index/Common/img/index/phone.png" alt="电话" />
 			</div>
-			<p style="color:#8FC31F ;font-size:20px">400-9026-365</p>
-			<p style="font-size: 12px;color:#666; margin-left:58px">在线客服(服务时间 9:00~18:00)</p>
+			<p style="color:#8FC31F ;font-size:28px">400-9026-365</p>
+			<p style="font-size: 12px;color:#666; margin-left:58px;
+			margin-top: 20px;margin-bottom: 20px;">在线客服(服务时间 9:00~18:00)</p>
 			<a href="#" class="button">
 				<img src="__ROOT__/Index/Common/img/index/mic.png" alt="耳麦" />
 				<span>在线客服</span>
@@ -372,5 +438,12 @@
 				presentcpt[i].style.marginRight = "0px";
 			}
 		}
+		//下来菜单
+	$(".pullList").hover(function(){
+		$(".item").slideToggle("100");
+		$(".item ul").hover(function(){
+			$(".item").css("display","block")
+		})
+	})
 	</script>
 </html>

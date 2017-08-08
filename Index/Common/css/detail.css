@@ -17,7 +17,7 @@ body{
 	margin: 0px auto;
 	position: relative;
 	z-index: 1;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 header{
 	width: 100%;
@@ -113,6 +113,118 @@ hr{
 	width: 100%;
 	border: 1px rgb(136,196,57) solid;
 	margin: 0px;
+}
+.pullList{ 
+    height: 35px;
+    width: 180px;
+    position: absolute;
+    top: -89px;
+    z-index: 100;
+}
+/*商品选项*/
+
+.item ul,li,p{
+	margin: 0px;
+	padding: 0px;
+}
+.item{
+	width: 180px;
+	height: 460px;
+	position: absolute;
+	left: 0px;
+	top: 35px;
+	display: none;
+	z-index: 1000;
+}
+.item h5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:white;
+}
+.item ul{
+	background:#767068;
+	height: 460px;
+    margin-top: 10px;
+}
+.item li{
+	border-bottom: 1px dashed #87827a;
+	margin-top: -10px;
+	padding-left: 12px;
+    padding-top: 1px;
+    box-sizing: border-box;
+}
+
+.item li a:hover{
+	color:rgb(136,196,57)
+}
+.item li:hover{
+	background-color: #5a524a
+}
+.item li:hover span{
+	transform: rotateY(180deg);
+	transition: 0.5s;
+	
+}
+.item li:hover .itemImgF{
+	background-position: -17.5px 0px;
+}
+.item li:hover .itemImgS{
+	background-position: -17.5px -34px;
+}
+.item li:hover .itemImgT{ 
+	background-position: -17.5px -17px;
+
+ }
+ .item li:hover .itemImgFour{
+	background-position: -17.5px -54px;
+ }
+ .item li:hover .itemImgFive{
+	background-position: -17.5px -71px;
+ }
+.item li:nth-child(1){
+	height: 73px;
+}
+.item li:nth-child(2){
+	height: 93px;
+}
+.item li:nth-child(3){
+	height: 73px;
+}
+.item li:nth-child(4){
+	height: 93px;
+}
+.item li:nth-child(5){
+	border-bottom: 0px;
+	height: 149px;
+}
+
+.itemImg{
+	background-image: url(../img/index/item.png);
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+    
+}
+.itemImgS{
+	background-position: 0 -34px;
+}
+.itemImgT{
+	background-position: 0 -17px;
+}
+.itemImgFour{
+	background-position: 0 -54px;
+}
+.itemImgFive{
+	background-position: 0 -71px;
+}
+
+.item a{
+	display: inline-block;
+	color:#eeecec;
+	margin-right: 4px;
+	font-size: 12px;
 }
 /*底部样式*/
 a{
@@ -216,6 +328,7 @@ li{
 .bottom .connect{
 	width: 24%;
 	float: right;
+	margin-top: 32px;
 }
 .bottom .phone img{
 	width: 61px;
@@ -458,6 +571,7 @@ li{
 	width: 1200px;
 	margin: 0px auto;
 	overflow: hidden;
+	margin-bottom: 45px;
 }
 .boxmidLeft{
 	width: 980px;

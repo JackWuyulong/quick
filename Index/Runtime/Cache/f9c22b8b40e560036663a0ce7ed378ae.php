@@ -15,7 +15,14 @@
 		<meta charset="utf-8" />
 		<title>快租365</title>
 		<style type="text/css">
-			
+			.headLoginLeft a:hover{
+				color: rgb(136,196,57)
+			}
+
+			.headLoginLeft .yep:hover{
+				color: rgb(136,196,57)
+			}
+
 		</style>
 	</head>
 	<body>
@@ -24,8 +31,9 @@
 			<header>
 				<div class="headLogin">
 					<div class="headLoginLeft">
-						<a href="#">登录</a>
-						<a href="#">注册</a>
+						<?php if($_SESSION['username']!= ''): ?><span style="font-size: 12px">你好,&nbsp;
+							<?php echo (session('username')); ?></span> <span style="font-size: 12px;cursor: pointer;" onclick="quit()" class="yep">退出</span> <a href="">个人中心</a>
+						<?php else: ?> <a href="__APP__/Index/login">登录</a>&nbsp;&nbsp;<a href="#">注册</a><?php endif; ?>
 					</div>
 					<div class="headLoginRight">
 						<a href="#">我的订单</a>
@@ -39,7 +47,6 @@
 				<div class="headLogo">
 					<div class="headLogoLeft">
 						<img src="__ROOT__/Index/Common/img/index/logo_full.png"/>
-						<img src=""/>
 						<!-- <div style="height: 50px;width: 520px;"></div> -->
 					</div>
 					<div class="headLogoRight">
@@ -59,17 +66,32 @@
 			<div>
 				<div class="bodyHead">
 					<div class="fen">商品分类</div>
-					<a href="#">首页</a>
-					<a href="#">全部机型</a>
-					<a href="#">限时促销</a>
-					<a href="#">新品推荐</a>
+					<a href="__APP__/Index/index">首页</a>
+					<a href="__APP__/Index/Allcpt">全部机型</a>
+					<a href="__APP__/Index/Time">限时促销</a>
+					<a href="__APP__/Index/newproduct">新品推荐</a>
 					<a href="#">关于我们</a>
 					<a href="#" style="float: right;color: black;">我要还款></a>
 				</div>
 			</div>
+			
 		</div>
 		<hr />
 	</body>
+	<script type="text/javascript">
+		function quit(){
+			$.ajax({
+				url:"__APP__/Index/quitUser",
+				dataType:"JSON",
+				type:"post",
+				success:function(data){
+					if(data['status']==1){
+						window.location.href="__APP__/Index/login";
+					}
+				}
+			})
+		}
+	</script>
 </html>
 
 	<div class="contentSwiper">
@@ -1209,8 +1231,9 @@
 			<div class="phone">
 				<img src="__ROOT__/Index/Common/img/index/phone.png" alt="电话" />
 			</div>
-			<p style="color:#8FC31F ;font-size:20px">400-9026-365</p>
-			<p style="font-size: 12px;color:#666; margin-left:58px">在线客服(服务时间 9:00~18:00)</p>
+			<p style="color:#8FC31F ;font-size:28px">400-9026-365</p>
+			<p style="font-size: 12px;color:#666; margin-left:58px;
+			margin-top: 20px;margin-bottom: 20px;">在线客服(服务时间 9:00~18:00)</p>
 			<a href="#" class="button">
 				<img src="__ROOT__/Index/Common/img/index/mic.png" alt="耳麦" />
 				<span>在线客服</span>

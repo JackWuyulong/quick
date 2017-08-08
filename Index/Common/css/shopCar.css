@@ -98,6 +98,7 @@ header{
 .fen:before{
 	content: '\e056';
 }
+
 .bodyHead a{
 	float: left;
 	margin-left: 2%;
@@ -113,114 +114,175 @@ hr{
 	border: 1px rgb(136,196,57) solid;
 	margin: 0px;
 }
-/*全部机型页面样式*/
-.box img{
-	width: 100%;
+/*购物车内容部分*/
+.shopContent{
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 18px;
+	position: relative;
 }
-.bodyFenlei{
-	padding: 20px;
-	margin-top: 20px;
+a{
+	text-decoration: none;
 }
-.pinpai{
-	display: block;
-	overflow: hidden;
+li{
+	list-style: none;
 }
-.pinpai dt,.pinpai dd{
-	font-size: 14px;
-	float: left;
-	margin-left: 0px;
-	margin-right: 36px;
-	margin-bottom: 10px;
+p,ul,li{
+	margin: 0px;
+	padding: : 0px;
 }
-.pinpai dt{
-	color: #999;
+.shopContent .car{
+	color: rgb(136,196,57);
+	vertical-align: middle;
 }
-.pinpai dd{
+.shopContent .jumpIndex{
+	color:#666;
+	vertical-align: middle;
+}
+.shopContent .shopTitle img{
+	width: 16px;
+	vertical-align: middle;
+}
+
+.shopContent .carList{
+	margin-top: 10px;
+}
+.shopContent .carList table{
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+.carList td{
+	text-align: center;
+}
+.carList .doIt:hover{
+	color: #ad0015;
 	cursor: pointer;
 }
-.ddbox dd{
-	color: rgb(102,102,102);
+.carList tbody td{
+	text-align: center;
+	color:rgb(102, 102, 102);
+	height: 116px;
 }
-.spColor{
-	color: #8FC31F;
+.carList tbody tr{
+	border-bottom: 1px #ddd solid;
 }
-.ddbox{
-	overflow: hidden;
+.carList thead tr{
+	background: #ececec;
+    height: 44px;
+    box-sizing: border-box;
 }
-.shaixuan strong{
+.carList .ListImg{
+	float: left;
+	width: 110px;
+	height: 88px;
+}
+.carList .ListTitle{
+	margin-top: 14px;
+   width: 428px;
+    float: left;
 
 }
-.paixu{
-	list-style: none;
-	cursor: pointer;
-	overflow: hidden;
+.carList .ListTitle a:hover{
+	color:rgb(136,196,57);
 }
-.paixuLi{
+.carList p, a{
 	font-size: 14px;
-	color: rgb(102,102,102);
-	float: left;
-	margin-right: 40px;
+	color:rgb(102, 102, 102);
 }
-#selected{
+.carList .ListTitleS{
+	float: left;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+.carList .tip{
+	margin-left: -223px;
+    margin-top: 31px;
+    float: left;
+    width: 66px;
+    height: 23px;
+    background: rgb(136,196,57);
+    color: white;
+}
+
+.carList .num input{
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px #8FC31F solid;
+    height: 18px;
+}
+
+.carList .num span{
+	float: left;
+	width: 30%;
+	background: #8FC31F;
+	height: 22px;
+}
+
+.carList .listFoot{
+	width: 1200px;
+	height: 60px;
+	margin-top: 20px;
+	border:1px #ddd solid;
+	position: relative;
+	color: #666;
+}
+.carList .listFoot .listFootLeft{
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.carList .listFoot .listFootRight{
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.carList .listFoot .listFootLeft span{
+	cursor: pointer;
+}
+.carList .listFoot .listFootLeft span:hover{
 	color: #8FC31F;
 }
-.present{
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
+.carList .listFoot .listFootRight .AllPay{
+	color: #f00;
 }
-.presentcpt{
-	width: 261px;
-	height: 289px;
-	padding: 10px 15px;
-	margin: 0px 12px 12px 0px;
+.carList .listFoot .listFootRight{
+	line-height: 60px;
+}
+.carList .listFoot .listFootRight a{
+	display: inline-block;
+	background:rgb(136,196,57);
+	width: 108px;
+	height: 60px;
 	text-align: center;
-	/*border: 1px solid;*/
+	color: white;
+	font-size: 20px;
+
+}
+.shopCarBand{
+	width: 100%;
+	height: 110px;
+	margin-top: 20px;
+}
+.shopCarBand ul{
+	padding: 0px;
+}
+.shopCarBand li{
 	float: left;
-}
-.presentcpt img{
-	width: 240px;
-}
-.presentcpt p{
-	height: 24px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-	font-size: 14px;
-	color: rgb(102,102,102);
-	margin: 0px;
-}
-.presentcpt p a{
-	color: rgb(102,102,102);
-}
-.presentcpt a{
-	color: rgb(102,102,102);
-	text-decoration: none;
-	line-height: 24px;
-}
-.presentcpt h4{
-	color: #f5675d;
-	margin: 10px 0px;
-}
-@keyframes ani{
-	0%{
-		transform: translateY(0px);
-		box-shadow: 0px 0px 0px 0px white;
-	}
-	100%{
-		transform: translateY(-5px);
-		box-shadow: 5px 5px 10px 1px lightgray;
-	}
-}
-.presentcpt:hover{
-	animation: ani 0.5s linear forwards;
+	width: 25%;
+	text-align: center;
+	color: #717679;
+	font-size: 18px;
 }
 .pullList{ 
 	height:35px;
 	width: 180px;
 	position: absolute;
-	top: -35px;
+	top: -54px;
 	z-index: 100  
 }
 /*商品选项*/
@@ -328,6 +390,7 @@ hr{
 	margin-right: 4px;
 	font-size: 12px;
 }
+
 
 /*底部样式*/
 a{
@@ -488,3 +551,14 @@ li{
 .bottmImg img{
 	margin-left: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+

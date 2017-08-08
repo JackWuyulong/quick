@@ -856,6 +856,7 @@ hr{
 
 
 
+
 /*底部样式*/
 a{
 	text-decoration: none;
@@ -958,6 +959,7 @@ li{
 .bottom .connect{
 	width: 24%;
 	float: right;
+	margin-top: 32px;
 }
 .bottom .phone img{
 	width: 61px;
