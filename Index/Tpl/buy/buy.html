@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/buy.css">
+	</head>
+	<body>
+		<div class="headTitle">
+			<div class="headTitleLeft">你好，张三 消息(<span>0</span>) <a href="#">退出</a><a href="#">个人中心</a></div>
+			<div class="headTitleRight"><a href="#">我的订单</a><span class="sep">|</span><a href="#">帮助中心</a><span class="sep">|</span><span class="hotTel">客服热线：</span><span class="hotLine">400-9026-365</span></div>
+		</div>
+		<div class="headmidBg">
+			<div class="headmid">
+				<div class="headmidLeft">
+					<a href="#"><img src="__ROOT__/Index/Common/img/index/logo_full.png"></a>
+				</div>
+				<div class="headmidRight">
+					<div class="payStep">1.选择机型</div>
+					<div class="payStep">2.填写订单</div>
+					<div class="payStep">3.支付</div>
+				</div>
+			</div>
+		</div>
+		<div class="orderTitle">填写并核对订单信息</div>
+		<div class="box">
+			<table border="1" style="border-collapse: collapse" width="1100px" class="boxTable">
+				<tr>
+					<th>机器详情</th>
+					<th>租赁规则</th>
+					<th>台数</th>
+					<th>起租日期</th>
+					<th>租期</th>
+					<th>每月租金</th>
+				</tr>
+				<tr>
+					<td>
+						<div class="carDetailA"><img src="__ROOT__/Index/Common/img/alltype/mini_1461291609_6795.jpg"></div>
+						<div class="carDetailB">
+							<p>全新HP迷你台式机400 G3 DM win10 home版</p>
+							<p>G4560T/4G/500G/集显/win10 home版</p>
+						</div>
+					</td>
+					<td>固定租期</td>
+					<td>1</td>
+					<td>2017-8-11</td>
+					<td>24个月</td>
+					<td>￥99.00</td>
+				</tr>
+			</table>
+			<div class="address">收货地址<a href="#">添加地址</a></div>
+			<hr />
+			<div class="saleTic">优惠券 <a href="#">V</a></div>
+			<hr />
+			<div class="payDate">还款日期<input type="radio" name="date" checked>每月12号<input type="radio" name="date">每月23号<span>（还款日期只可选择一次，一旦选择不可修改，每个月的账单请按照选择的还款日期按时还款，逾期需缴纳相应的滞纳金)</span></div>
+			<hr />
+			<div class="accountBalance">账户余额<input type="checkbox"><span>账户余额（可用余额￥</span><span>0</span><span>)</span></div>
+			<hr />
+			<div class="payWay">支付方式<dl class="payWayDl"><dd><img src="__ROOT__/Index/Common/img/register/alipay.jpeg"></dd><dd><img src="__ROOT__/Index/Common/img/register/unionpay.jpeg"></dd></dl></div>
+			<hr />
+			<div class="beiZhu"><p>用户备注</p><textarea rows="5" cols="100" placeholder="此处可填写您对订单的其他要求"></textarea><p>选填，少于200字。提醒：如果备注信息和订单内容有冲突，除非您已和客服确定，否则以订单内容为准</p></div>
+			<div class="payDetail">
+				<div class="payDetailDiv">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;应付总金额：&nbsp;&nbsp;￥</span>
+					<span>3559.00</span>
+				</div>
+				<div class="payDetailDiv">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品总押金：&nbsp;&nbsp;￥</span>
+					<span>3460.00</span>
+					<span>&nbsp;本次免押金：-￥</span>
+					<span>0.00</span>
+					<span>&nbsp;需支付押金：￥</span>
+					<span>3460.00</span>
+				</div>
+				<div class="payDetailDiv">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首付押金：&nbsp;&nbsp;￥</span>
+					<span>99.00</span>
+				</div>
+				<div class="payDetailDiv">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优惠券：&nbsp;&nbsp;-￥</span>
+					<span>0.00</span>
+				</div>
+				<div class="payDetailDiv">
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账户余额：&nbsp;&nbsp;-￥</span>
+					<span>0</span>
+				</div>
+				<div>
+					<span>还需支付金额：&nbsp;&nbsp;￥</span>
+					<span class="payDetailTotle">3559.00</span>
+				</div>
+				<div class="ensure">
+					<input type="checkbox" name="">
+					<span>我已阅读并接受</span>
+					<a href="#">《租赁协议》</a>
+					<a href="#">《保修条款》</a>
+				</div>
+				<div class="suub">
+					<button class="sub">请选择支付方式</button>
+				</div>
+			</div>
+		</div>
+		<include file="public:bottom"/>
+	</body>
+</html>
