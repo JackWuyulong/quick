@@ -512,11 +512,11 @@ hr{
 	overflow: hidden;
 }
 .hotProduct .kuang{
-	width: 238px;
+	width: 236px;
     height: 290px;
     float: left;
-    margin-right: 10px;
-    border: 1px #666 solid
+    border: 1px #666 solid;
+    margin-right: 1px;
 }
 .hotProduct .kuang:hover{
 	border: 1px #333 solid

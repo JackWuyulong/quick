@@ -7,8 +7,9 @@
 	<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper.min.js"></script>
 	<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="__ROOT__/Index/Common/css/swiper.min.css" />
+	<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="myapp" ng-controller="myController">
 	<!doctype html>
 <html>
 	<head>
@@ -93,7 +94,6 @@
 		}
 	</script>
 </html>
-
 	<div class="contentSwiper">
 
 		<div class="showList">
@@ -273,7 +273,32 @@
 			</div>
 		</div>
 		<div class="hotProduct">
-			<div class="kuang">
+			<div ng-repeat="v in hotList">
+				<div class="kuang">
+					<div class="hotItem">
+						<div class="hotItemImg">
+							
+							<img src="__ROOT__/{{v.img[0].imgUrl}}" alt="" />
+						</div>
+						<p style="margin-top: 10px;">
+							<a href="">
+								{{v.goodsName}}
+							</a>
+						</p>
+						<p>
+							<a href="">
+								{{v.goodsTitle}}
+							</a>
+						</p>
+						<h4 style="color:#f5675d;margin: 5px">￥{{v.price[0].price}}</h4>
+					</div>
+					<div class="light">
+						
+					</div>
+				</div>
+			</div>
+			
+			<!-- <div class="kuang">
 				<div class="hotItem">
 					<div class="hotItemImg">
 						<img src="__ROOT__/Index/Common/img/index/hotImgF.png" alt="" />
@@ -289,24 +314,7 @@
 				<div class="light">
 					
 				</div>
-			</div>
-			<div class="kuang">
-				<div class="hotItem">
-					<div class="hotItemImg">
-						<img src="__ROOT__/Index/Common/img/index/hotImgF.png" alt="" />
-					</div>
-					<p style="margin-top: 10px;">
-						<a href="">全新惠普（HP）340 G3 14英寸 win10 home版商务办公笔记本电脑</a>
-					</p>
-					<p>
-						<a href="">i3-6006U/4G内存/500G/集成显卡/win10 home版</a>
-					</p>
-					<h4 style="color:#f5675d;margin: 5px">￥118.00</h4>
-				</div>
-				<div class="light">
-					
-				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<div id="commonProduct" class="hotType">
@@ -348,7 +356,27 @@
 					</div>
 				</div>
 				<ul class="commonItem">
-					<li>
+					<li ng-repeat="v in hotList">
+						<div class="goodsImg">
+							<img src="__ROOT__/{{v.img[0].imgUrl}}" alt="" />
+						</div>
+						<div class="itemCaption">
+							<p>
+								<a href="" title="v.goodsName">{{v.goodsName}}</a>
+							</p>
+							<p>
+								<a href="" title="v.goodsTitle">
+									{{v.goodsTitle}}
+								</a>
+							</p>
+							<h4>¥ {{v.price[0].price}}</h4>
+							
+						</div>
+						<div class="light lightSize">
+					
+						</div>
+					</li>
+					<!-- <li>
 						<div class="goodsImg">
 							<img src="__ROOT__/Index/Common/img/index/runnig.png" alt="" />
 						</div>
@@ -427,27 +455,7 @@
 						<div class="light lightSize">
 					
 						</div>
-					</li>
-					<li>
-						<div class="goodsImg">
-							<img src="__ROOT__/Index/Common/img/index/runnig.png" alt="" />
-						</div>
-						<div class="itemCaption">
-							<p>
-								<a href="" title="ThinkPad X220 12.5英寸便携笔记本电脑">ThinkPad X220 12.5英寸便携笔记本电脑</a>
-							</p>
-							<p>
-								<a href="" title="i5-2520M 2.5G/4G内存/320G硬盘/HD3000集成显卡">
-									i5-2520M 2.5G/4G内存/320G硬盘/HD3000集成显卡
-								</a>
-							</p>
-							<h4>¥ 70.00</h4>
-							
-						</div>
-						<div class="light lightSize">
-					
-						</div>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 			
@@ -1348,6 +1356,16 @@
 		$(this).css("background","#8FC31F").siblings().css("background","white");
 	})
 
+	var app = angular.module("myapp",[]);
+	app.controller("myController",function($scope,$http){
+		$scope.hotList = [];
+		$http.get("__APP__/Index/login_hot").success(
+			function(data){
+				$scope.hotList = data;
+				console.log(data);
+			}
+		)
+	})
 	
 </script>
 </html>
