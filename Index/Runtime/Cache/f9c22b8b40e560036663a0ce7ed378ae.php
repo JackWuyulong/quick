@@ -19,7 +19,6 @@
 			.headLoginLeft a:hover{
 				color: rgb(136,196,57)
 			}
-
 			.headLoginLeft .yep:hover{
 				color: rgb(136,196,57)
 			}
@@ -34,12 +33,12 @@
 					<div class="headLoginLeft">
 						<?php if($_SESSION['username']!= ''): ?><span style="font-size: 12px">你好,&nbsp;
 							<?php echo (session('username')); ?></span> <span style="font-size: 12px;cursor: pointer;" onclick="quit()" class="yep">退出</span> <a href="">个人中心</a>
-						<?php else: ?> <a href="__APP__/Index/login">登录</a>&nbsp;&nbsp;<a href="#">注册</a><?php endif; ?>
+						<?php else: ?> <a href="__APP__/Index/login">登录</a>&nbsp;&nbsp;<a href="__APP__/Index/register">注册</a><?php endif; ?>
 					</div>
 					<div class="headLoginRight">
-						<a href="#">我的订单</a>
+						<a href="__APP__/Index/personal">我的订单</a>
 						<span class="sep">丨</span>
-						<a href="#">帮助中心</a>
+						<a href="__APP__/Index/help">帮助中心</a>
 						<span class="sep">丨</span>
 						<span class="hotTel">客服热线:</span>
 						<span class="hotLine">400-9026-365</span>
@@ -115,8 +114,8 @@
     		</ul>
     		<p>Hi,欢迎来到快租365!</p>
     		<div class="into">
-    			<a href="" class="login">登陆</a>
-    			<a href="" class="register">注册</a>
+    			<a href="__APP__/Index/login" class="login">登陆</a>
+    			<a href="__APP__/Index/register" class="register">注册</a>
     		</div>
     		<div class="adv">
     			<a href="">

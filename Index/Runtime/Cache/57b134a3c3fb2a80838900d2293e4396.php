@@ -6,7 +6,7 @@
 		<meta name="keywords" content="电脑租赁,电脑出租,租电脑,租笔记本,快租365,免押金租赁,企业租赁电脑,出租办公电脑,IBM笔记本租赁,IBM电脑租赁,租苹果电脑,服务器租赁,高配台式机出租,笔记本电脑租赁,苹果电脑出租,北京笔记本出租,电脑免押金租赁"/>
 		<meta name="description" content="快租365是一站式电脑租赁和IT服务电商平台,主要为全国企业用户提供笔记本电脑租赁,台式机租赁,苹果电脑租赁以及各类办公用IT设备,打印机,复印机租赁等,同时提供免押金,随借随还,最低60元可租电脑服务"/>
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/register.css" />
-		<script src="__ROOT__/Index/Common/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script  type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.1.1.min.js"></script>		
 	</head>
 	<body>
 		<div class="wrap">
@@ -14,8 +14,8 @@
 				<div class="header_top">
 					<div class="header_top_centent">
 						<div class="top_centent_right pull-right">
-							<a href="">我的订单</a>
-							<a href="">帮助中心</a>
+							<a href="__APP__/Index/personal">我的订单</a>
+							<a href="__APP__/Index/help">帮助中心</a>
 							<span class="top_centent_right_text">客服热线：<span class="text-success">400-9026-365</span>
 							</span>
 						</div>
@@ -35,7 +35,7 @@
 						</div>
 						<div class="user_register pull-right">
 							<span class="user_register_text">已有账号？
-							<a href="" class="text_success">请登录</a>
+							<a href="__APP__/Index/login" class="text_success">请登录</a>
 							</span>
 						</div>
 					</div>
@@ -45,7 +45,7 @@
 				<div class="content_container">
 					<div class="content_container_register">
 						<div class="register_left pull-left">
-							<div class="register_left_con">
+							<div class="register_left_con" >
 								<div class="con_title">
 									<div class="con_title_left pull-left">客户类型：</div>
 									<div class="con_title_right pull-right">
@@ -59,87 +59,88 @@
 										</ul>
 									</div>						
 								</div>
-								<div id="con_content">
+								<div id="con_content" >
 									<!--公司名称-->
-									<div id="list1_con" class="con_content_con">
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">
-												<span><span class="text_color">*</span>公司名称：</span>
-											</div>
-											<div class="con_content_con_right pull-right">
-												<input type="text" />
-											</div>
-										</div>
-										<!--手机号码-->
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">
-												<span><span class="text_color">*</span>手机号码：</span>
-											</div>
-											<div class="con_content_con_right pull-right">
-												<input type="text" />
-											</div>
-										</div>
-										<!--图片验证码-->
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">
-												<span><span class="text_color">*</span>图片验证码：</span>
-											</div>
-											<div class="con_content_con_right pull-right">
-												<input type="text" class="put pull-left"/>
-												<img src="" alt="" onclick="flipCode(this)" style="width: 117px; padding-left: 5px; height:38px;" class="pull-right"/>
-											</div>
-										</div>
-										<!--手机验证码-->
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">
-												<span><span class="text_color">*</span>手机验证码：</span>
-											</div>
-											<div class="con_content_con_right pull-right">
-												<input type="text" class="put pull-left"/>
-												<input type="button" class="put_b  pull-right" style="width: 110px; padding-left: 10px; height:38px; " value="获取验证码"/>
-											</div>
-										</div>
-										<!--输入密码-->
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">
-												<span><span class="text_color">*</span>输入密码：</span>
-											</div>
-											<div class="con_content_con_right pull-right register-password">
-												<input type="password" id="demo_input"/>
-												<img class="password-icon" id="demo_img" onClick="hideShowPsw()" src="__ROOT__/Index/Common/img/register/password_icon2.png"/>
-											</div>
-										</div>
-										<!--确认密码-->
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">
-												<span><span class="text_color">*</span>确认密码：</span>
-											</div>
-											<div class="con_content_con_right pull-right">
-												<input type="text" />
-											</div>
-										</div>
-										<!--邀请码-->
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">
-												<span>邀请码：</span>
-											</div>
-											<div class="con_content_con_right pull-right">
-												<input type="password" />
-											</div>
-										</div>
-										<!--协议-->
-										<div class="form_list">
-											<div class="con_content_con_left pull-left">	</div>
-											<div class="con_content_con_right pull-right" style="overflow: hidden;margin-bottom: 0; padding-top: 9px;">
-												<div style="font-size: 12px;">
-													<input type="checkbox" name="" id="rue" value="" />
-													<lable for="rue"> 我已阅读并接受</lable>
-													<a href="" class="text-success">《快租365用户注册协议》</a>
+									<div id="list1_con" class="con_content_con" >
+										<form novalidate="novalidate" name="myform">
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">
+													<span><span class="text_color">*</span>公司名称：</span>
+												</div>
+												<div class="con_content_con_right pull-right">
+													<input type="text" name="companyname" id="companyname" placeholder="公司名称"  />
 												</div>
 											</div>
-										</div>
-										<!--立即注册-->
-										<div class="form_list">
+											<!--手机号码-->
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">
+													<span><span class="text_color">*</span>手机号码：</span>
+												</div>
+												<div class="con_content_con_right pull-right">
+													<input type="text"  name="phonenumber" id="phonenumber" placeholder="手机号码" />
+												</div>
+											</div>
+											<!--图片验证码-->
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">
+													<span><span class="text_color">*</span>图片验证码：</span>
+												</div>
+												<div class="con_content_con_right pull-right" style="position: relative;">
+													<input type="text" class="put pull-left" />
+												 <canvas width="116" height="38"  id="mycanvas"  style="position: absolute;right: 0;top: 0;"></canvas>
+												</div>
+											</div>
+											<!--手机验证码-->
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">
+													<span><span class="text_color">*</span>手机验证码：</span>
+												</div>
+												<div class="con_content_con_right pull-right">
+													<input type="text" class="put pull-left" ng-model=""/>
+													<input type="button" class="put_b  pull-right" style="width: 110px; padding-left: 10px; height:38px; " value="获取验证码"/>
+												</div>
+											</div>
+											<!--输入密码-->
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">
+													<span><span class="text_color">*</span>输入密码：</span>
+												</div>
+												<div class="con_content_con_right pull-right register-password">
+													<input type="password" id="demo_input" />
+													<img class="password-icon" id="demo_img" onClick="hideShowPsw()" src="__ROOT__/Index/Common/img/register/password_icon2.png"/>
+												</div>
+											</div>
+											<!--确认密码-->
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">
+													<span><span class="text_color">*</span>确认密码：</span>
+												</div>
+												<div class="con_content_con_right pull-right">
+													<input type="text" ng-model=""/>
+												</div>
+											</div>
+											<!--邀请码-->
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">
+													<span>邀请码：</span>
+												</div>
+												<div class="con_content_con_right pull-right">
+													<input type="password" ng-model=""/>
+												</div>
+											</div>
+											<!--协议-->
+											<div class="form_list">
+												<div class="con_content_con_left pull-left">	</div>
+												<div class="con_content_con_right pull-right" style="overflow: hidden;margin-bottom: 0; padding-top: 9px;">
+													<div style="font-size: 12px;">
+														<input type="checkbox" name="" id="rue" value="" />
+														<lable for="rue"> 我已阅读并接受</lable>
+														<a href="" class="text-success">《快租365用户注册协议》</a>
+													</div>
+												</div>
+											</div>
+											<!--立即注册-->
+											<div class="form_list">
 											<div class="con_content_con_left pull-left">	</div>
 											<div class="con_content_con_right pull-right" >
 												<div class="con_content_con_right_button ">
@@ -147,8 +148,9 @@
 												</div>
 											</div>
 										</div>
+										</form>
 									</div>
-									<div id="list2_con" class="con_content_con">
+									<div id="list2_con" class="con_content_con" >
 										<div class="form_list">
 											<div class="con_content_con_left pull-left">
 												<span><span class="text_color">*</span>姓名：</span>
@@ -171,9 +173,9 @@
 											<div class="con_content_con_left pull-left">
 												<span><span class="text_color">*</span>图片验证码：</span>
 											</div>
-											<div class="con_content_con_right pull-right">
+											<div class="con_content_con_right pull-right" style="position: relative;">
 												<input type="text" class="put pull-left"/>
-												<img src="" alt="" onclick="flipCode(this)" style="width: 117px; padding-left: 5px; height:38px;" class="pull-right"/>
+												<canvas width="116" height="38" id="mycanvas2" style="position:absolute;right: 0;top: 0;"></canvas>
 											</div>
 										</div>
 										<!--手机验证码-->
@@ -380,6 +382,7 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
 	<script>
 		//鼠标移入问号显示隐藏内容
 		$(".title_right_content_g_wen").mouseover(function(){
@@ -401,17 +404,58 @@
 	     })
 		//密码框是保密还是显示文本
 		// 这里使用最原始的js语法实现，可对应换成jquery语法进行逻辑控制  
-    var demoImg = document.getElementById("demo_img");  
-    var demoInput = document.getElementById("demo_input");  
-    //隐藏text block，显示password block  
-    function hideShowPsw(){  
-        if (demoInput.type == "password") {  
-            demoInput.type = "text";  
-            demoImg.src = "__ROOT__/Index/Common/img/register/password_icon1.png";  
-        }else {  
-            demoInput.type = "password";  
-            demoImg.src = "__ROOT__/Index/Common/img/register/password_icon2.png";  
-        }  
-    }  
+	    var demoImg = document.getElementById("demo_img");  
+	    var demoInput = document.getElementById("demo_input");  
+	    //隐藏text block，显示password block  
+	    function hideShowPsw(){  
+	        if (demoInput.type == "password") {  
+	            demoInput.type = "text";  
+	            demoImg.src = "__ROOT__/Index/Common/img/register/password_icon1.png";  
+	        }else {  
+	            demoInput.type = "password";  
+	            demoImg.src = "__ROOT__/Index/Common/img/register/password_icon2.png";  
+	        }  
+	    }  
+	  //验证码生成
+	  var canvas = document.getElementById("mycanvas");	
+	  var context = canvas.getContext("2d");	
+		draw();
+		canvas.onclick = function(){
+			context.clearRect(0,0,canvas.width,canvas.height);
+			draw();
+		}	
+		
+		//随机颜色
+		function randColor(min,max){
+			var r = parseInt(Math.random()*(max-min)+min);
+			var g = parseInt(Math.random()*(max-min)+min);
+			var b = parseInt(Math.random()*(max-min)+min);
+			return "rgb("+r+","+g+","+b+")";
+		}
+		//随机数
+		function randNum(min,max){
+			return parseInt(Math.random()*(max-min)+min);
+		}
+		
+		function draw(){
+			//画背景
+			context.fillStyle = randColor(200,255);
+			context.fillRect(0,0,116,38);
+			//画文字			
+			 var data = "0123456789"
+			for(var i=0;i<4;i++){
+				var str = data[randNum(0,data.length-1)];
+				context.font = randNum(20,30)+"px Arial";
+				context.fillStyle = randColor(0,255);
+				context.fillText(str,i*30,randNum(20,30));
+			}
+			context.save();
+			context.globalAlpha = 0.3;
+			
+			context.restore();
+		}
+		
+    
+  
 	</script>
 </html>

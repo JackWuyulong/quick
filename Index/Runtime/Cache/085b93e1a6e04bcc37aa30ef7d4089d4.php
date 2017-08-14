@@ -14,8 +14,8 @@
 				<div class="header_top">
 					<div class="header_top_centent">
 						<div class="top_centent_right pull-right">
-							<a href="">我的订单</a>
-							<a href="">帮助中心</a>
+							<a href="__APP__/Index/personal">我的订单</a>
+							<a href="__APP__/Index/help">帮助中心</a>
 							<span class="top_centent_right_text">客服热线：<span class="text-success">400-9026-365</span>
 							</span>
 						</div>
@@ -35,7 +35,7 @@
 						</div>
 						<div class="user_register pull-right">
 							<span class="user_register_text">没有账号？
-							<a href="" class="text_success">	免费注册</a>
+							<a href="__APP__/Index/register" class="text_success">	免费注册</a>
 							</span>
 						</div>
 					</div>
@@ -68,7 +68,7 @@
 							
 								<div  class="btn btn-success buttons" ng-click="sub()">登陆</div>
 							<div class="login_z">
-							<a href="" class="btn buttons " >立即注册</a>
+							<a href="__APP__/Index/register" class="btn buttons " >立即注册</a>
 							</div>
 						</div>
 					</div>

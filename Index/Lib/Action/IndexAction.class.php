@@ -34,6 +34,17 @@ class IndexAction extends Action {
     public function time(){
     	$this->display("time");
     }
+
+    public function register(){
+		$this->display("register");
+    }
+    public function help(){
+    $this->display("help");
+    }
+    public function personal(){
+    $this->display("personal");
+    }
+
     public function checkUser(){ 
         $data = file_get_contents("php://input");
         $sureData = json_decode($data,true);
